@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lara is awesome</title>
+    <style>
+      * { margin:0; padding:0; borer:none; outline:none; text-decoration:none; }
+      html, body { font-family:helvetica; font-weight:200; letter-spacing:0.02em; }
+
+      .Nav {
+        background:rgba(0,0,0,0.8);
+        color:white;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        display:flex;
+        justify-content:space-between;
+      }
+      .Nav_items { }
+      .Nav_item { color:currentColor; padding:6px; display:inline-block; position:relative; }
+      .Nav_item::after { content:attr(data-alert); background:tomato; color:white; font-size:13px; display:block; padding:3px; position:absolute; top:-10px; right:-10px; }
+      .Nav_item.-title { flex:1; }
+
+      .Masthead { background:#ff0066; color:black; display:flex; height:98vh; justify-content:center; align-items:center; flex-direction:column; }
+      .Masthead.-alt { background:#cccc00; }
+      .Masthead_title { font-size:34px; margin-bottom:13px; }
+      .Masthead_subtitle { font-size:13px; margin-bottom:3px;}
+      .Masthead_description { font-size:13px; margin-bottom:13px; }
+      .Masthead_cta {
+        border:3px solid currentColor;
+        padding:0 34px;
+        font-size:21px;
+        line-height:55px;
+        border-radius:3px;
+        color:currentColor;
+      }
+
+      .Features {}
+      .Feature {}
+      .Feature_title {}
+      .Feature_cta {}
+
+    </style>
+  </head>
+  <body>
+    <div class="Nav">
+      <a href="#" class="Nav_item -title">Laras Site</a>
+      <nav class="Nav_items">
+        <a class="Nav_item" href="#Features" data-alert="5">Features</a>
+        <a class="Nav_item" href="#">Two</a>
+        <a class="Nav_item" href="#">Three</a>
+      </nav>
+    </div>
+
+    <section class="Masthead">
+      <h1 class="Masthead_title">Title</h1>
+      <h3 class="Masthead_subtitle">Sub Title</h3>
+      <a class="Masthead_cta" href="#">Click Me</a>
+    </section>
+    <section class="Masthead -alt">
+      <h1 class="Masthead_title">Title</h1>
+      <h3 class="Masthead_subtitle">Sub Title</h3>
+      <a class="Masthead_cta" href="#">Click Me</a>
+    </section>
+
+    <Section class="Features" id="Features">
+      <div class="Feature">
+        <h3 class="Feature_title">Feature 1!</h3>
+        <a class="Feature_cta" href="#">Click Me</a>
+      </div>
+      <div class="Feature">
+        <h3 class="Feature_title">Feature 2!</h3>
+        <a class="Feature_cta" href="#">Click Me</a>
+      </div>
+      <div class="Feature">
+        <h3 class="Feature_title">Feature 3!</h3>
+        <a class="Feature_cta" href="#">Click Me</a>
+      </div>
+    </Section>
+
+  </body>
+</html>
